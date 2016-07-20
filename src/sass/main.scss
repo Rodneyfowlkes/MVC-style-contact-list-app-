@@ -1,0 +1,107 @@
+
+body {
+	background-color:#B3D0D7;
+}
+
+
+.container {
+	width:27%;
+	margin: auto;
+}
+
+.newcontact_div{
+	width:100%;
+	margin: auto;
+	background-color: #DADFE4;
+}
+
+
+.contact_inputs{
+	width:80%;
+	margin:auto;
+}
+
+
+.contact_form{
+
+  
+	padding-top:20px;
+
+	input{ 
+		border-radius: 3px;
+	    border-style: none;
+		margin: 0% 0% 2% 0%;
+	}
+
+   .firstname{
+
+   width: 30%;
+   }
+
+   .lastname {
+   	width: 30%;
+   }
+
+    .number {
+    	display: block;
+   	width: 50%;
+   }
+  .city {
+   	width: 20%;
+   } 
+   .state {
+   	width: 20%;
+   }
+
+}
+
+.contact_list{
+	
+}
+
+.contact_div{
+height: 80px;
+position:relative;
+}
+
+.conimg{
+
+
+}
+
+.concon {
+
+	position: absolute;
+
+	height: 75px;
+	width: 60%;
+    top:0px;
+    right: 13%;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: #B37228;
+    span {
+    	border-radius:2px;
+    }
+
+}
+
+.listname{
+	background-color: #ACB2B8;
+	font-weight: bold;
+	
+}
+.listnumber{
+	display:block;
+	background-color: #CFD3D6;
+		margin-top: 10px;
+
+}
+
+.listaddress{
+	display:block;
+	background-color: #CFD3D6;
+		margin-top: 3px;
+
+}
+
+
