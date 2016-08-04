@@ -1,5 +1,4 @@
-import $ from 'jquery';
-import _ from 'lodash';
+
 
 class Contact {
 	constructor(id){

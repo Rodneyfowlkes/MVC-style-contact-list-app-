@@ -4,15 +4,16 @@ import {Contact} from '../models/contact.js';
 
 class AppController {
 
-	constructor(){
+	constructor(fname,lname,number,city,state,form,book,contact_inputs){
 
-		this.firstname    = $('.firstname');
-		this.lastname     = $('.lastname');
-		this.number       = $('.number');
-		this.city         = $('.city');
-		this.state        = $('.state');
-		this.form         = $('.contact_form');
-		this.book         = $('.contact_list')
+		this.firstname    = fname
+		this.lastname     = lname
+		this.number       = number
+		this.city         = city
+		this.state        = state
+		this.form         = form
+		this.book         = book
+		this.contact_inputs = contact_inputs
 		this.contactcount = 0;
 		this.contactarray = [];
 	}
@@ -40,17 +41,9 @@ class AppController {
               </div>
           </div>`
 		this.book.append(contact_temp);
-		$('.contact_inputs').html(replaced_form);
+		this.contact_inputs.html(replaced_form);
 }
-    resetform(){
 
-    	this.firstname.attr('value',' ') 
-		// this.lastname.val()     = '';
-		// this.number.val()       = '';
-		// this.city.val()         = '';
-		// this.state.val()        = '';
-
-    }
     newform(){
 
     	this.form.on('submit', (event)=>{
@@ -58,14 +51,14 @@ class AppController {
     		  event.preventDefault();
               this.contactcount += 1;
 		      let x = new Contact(this.contactcount);
-		      	x.firstname    = $('.firstname').val();
-				x.lastname     = $('.lastname').val();
-				x.number       = $('.number').val();
-				x.city         = $('.city').val();
-				x.state        = $('.state').val();
+		      	x.firstname    = this.firstname.val();
+				x.lastname     = this.lastname.val();
+				x.number       = this.number.val();
+				x.city         = this.city.val();
+				x.state        = this.state.val();
 				this.contactarray.push(x)
                 this.addtoBook();
-                this.resetform();
+  
     	});
 }
 
